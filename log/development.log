@@ -1236,3 +1236,13 @@ Started GET "/posts/new" for 24.90.177.190 at 2020-08-24 19:23:52 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 24.90.177.190 at 2020-08-24 19:24:01 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uERw/iBE8Eg1AXdsIA8LTOjCMxSZRk44FhBBw5yrQ66TWNwPCqbTiEMfr9sMS0MxD43mtOzVlr0PePzkOPsSiQ==", "title"=>"new post", "description"=>"helloooooo", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "new post"], ["description", "helloooooo"], ["created_at", "2020-08-24 19:24:01.547568"], ["updated_at", "2020-08-24 19:24:01.547568"]]
+  [1m[35m (51.8ms)[0m  commit transaction
+Redirected to http://174.138.35.103:52229/posts/8
+Completed 302 Found in 63ms (ActiveRecord: 53.2ms)
