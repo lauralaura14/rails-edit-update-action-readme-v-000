@@ -1388,3 +1388,14 @@ Processing by PostsController#update as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.6ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "asdfasdf. pkpkp"], ["updated_at", "2020-08-24 19:43:38.003720"], ["id", 2]]
+  [1m[36m (270.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://174.138.35.103:52229/posts/2
+Completed 302 Found in 311ms (ActiveRecord: 271.6ms)
+
+
+Started GET "/posts/2" for 24.90.177.190 at 2020-08-24 19:43:38 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
